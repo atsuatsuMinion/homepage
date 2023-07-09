@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  match_date: 2023-03-24
+  enemy_team: MyString
+  enemy_score: 1
+  my_score: 1
+  match_time: MyString
+  time: MyString
+
+two:
+  title: MyString
+  match_date: 2023-03-24
+  enemy_team: MyString
+  enemy_score: 1
+  my_score: 1
+  match_time: MyString
+  time: MyString

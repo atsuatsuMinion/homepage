@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-visual">
+            <h1 class="main-title">試合情報</h3>
+        </div>
+    </div>
+</div>
+<div class="container schedule-table rounded pr-0 pl-0 mt-3 mt-md-4">
+    <p class="schedule-title rounded-top p-2 pl-3 mb-4"><strong>日程表</strong></p>
+    <% @matches.each do |match| %>
+        <div class="row mr-3 mr-md-4 mr-lg-5 ml-3 ml-md-4 ml-lg-5">
+            <div class="col-12 schedule-match pt-2 pb-2 mb-4">
+                <div class="schedule-match-top text-center">
+                    <span class="schedule-match-title">　<%= match.title %></span><br>
+                    <% if match.match_datetime.present? %>
+                        <span class="schedule-match-datetime">　<%= match.match_datetime.strftime('%Y 年 %m 月 %d 日　%H : %M ～') %></span>
+                    <% else %>
+                        <span class="schedule-match-datetime">　???? 年 ?? 月 ?? 日　?? : ?? ～</span>
+                    <% end %>
+                </div>
+                <div class="schedule-match-bottom mt-2">
+                    <div class="row row-cols-3">
+                        <div class="col-4 col-sm-5 align-self-start text-center text-truncate">
+                            <span class="schedule-team"><%= image_tag "logo.png", size: "50x50" %><br>Saitama 2nd.</span>
+                        </div>
+                        <div class="col-4 col-sm-2 align-self-center text-center">
+                            <% if match.my_score.present? %>
+                                <span class="schedule-score"><%= match.my_score %> － <%= match.enemy_score %></span>
+                            <% else %>
+                                <span class="schedule-score">？ － ？</span>
+                            <% end %>
+                        </div>
+                        <div class="col-4 col-sm-5 align-self-end text-center text-truncate">
+                            <span class="schedule-team"><%= image_tag match.get_enemy_image, size: "50x50" %><br><%= match.enemy_team %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>      
+</div>

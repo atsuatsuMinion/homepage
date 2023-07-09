@@ -1,0 +1,160 @@
+.img_wrap{
+    overflow: hidden;
+}
+
+.img_wrap img{
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.img_wrap:hover img{
+    opacity: 0.6;
+    transition-duration: 0.3s;
+}
+
+.main-visual{
+    background-color: Navy;
+    height: 180px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-title{
+    color: gold;
+    line-height: 180px;
+}
+
+.member-name{
+    font-size:26px;
+    line-height: 26px;
+}
+
+.member-furigana{
+    font-size:14px;
+    line-height: 14px;
+}
+
+.strong-number{
+    font-size:20px;
+    color: goldenrod;
+}
+
+.schedule-table{
+    background-color: lightsteelblue;
+}
+
+.schedule-title{
+    color: white;
+    background-color: dimgray;
+}
+
+.schedule-match{
+    background-color: azure;
+}
+
+.schedule-match-top{
+    font-size: 16px;
+}
+.schedule-my_team, .schedule-enemy_team{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.schedule-score{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.footer-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-link{
+    display: inline;
+    line-height: 100px;
+}
+
+.footer-box{
+    position: relative;
+}
+
+.footer-logo{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+
+@media screen and (max-width:610px) {
+    .footer-list{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .footer-list{
+        padding-top: 15px;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-link{
+        display: inline;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .navbar-brand{
+        display: inline-block;
+        width: 80%;
+    }
+    
+    .navbar-toggler{
+        display: inline-block;
+        width: 15%;
+    }
+    .main-visual{
+        height: 130px;
+    }
+    .main-title{
+        color: gold;
+        line-height: 130px;
+        font-size: 34px;
+    }
+
+    .inquiry-text{
+        font-size: 14px;
+    }
+
+    .schedule-team{
+        font-size: 12px;
+    }
+
+    .schedule-match-title, .schedule-match-datetime{
+        font-size: 14px;
+    }
+
+    .schedule-score{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width:450px) {
+    .inquiry-text{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .inquiry-text{
+        font-size: 11px;
+    }
+}

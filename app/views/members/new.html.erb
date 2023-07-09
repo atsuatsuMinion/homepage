@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-visual">
+            <h1 class="main-title">メンバー追加</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <%= form_with model: @member do |f| %>
+            <div class="form-title">
+                <%= f.label :name , "名前"%>
+            </div>
+            <div class="form-name">
+                <%= f.text_field :name %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :furigana , "名前(ふりがな)"%>
+            </div>
+            <div class="form-furigana">
+                <%= f.text_field :furigana %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :number, "背番号" %>
+            </div>
+            <div class="form-number">
+                <%= f.number_field :number %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :birthday, "生年月日"%>
+            </div>
+            <div class="form-day">
+                <%= f.date_select :birthday, use_two_digit_numbers: true, start_year: 1995 %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :position, "ポジション"%>
+            </div>
+            <div class="form-position">
+                <%= f.text_field :position %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :profile_image, "顔写真"%>
+            </div>
+            <div class="form-image">
+                <%= f.file_field :profile_image, accept: "image/*" %>
+            </div>
+            
+            <%= f.submit '追加' %>
+        <% end %>
+    </div>
+</div>

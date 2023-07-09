@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-visual">
+            <h1 class="main-title">試合情報追加</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <%= form_with model: @match do |f| %>
+            <div class="form-title">
+                <%= f.label :title , "試合名"%>
+            </div>
+            <div class="form-name">
+                <%= f.text_field :title %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :match_datetime, "試合日時" %>
+            </div>
+            <div class="form-datetime">
+                <%= f.datetime_field :match_datetime %>  
+            </div>
+
+            <div class="form-title">
+                <%= f.label :enemy_team, "敵チーム名"%>
+            </div>
+            <div class="form-name">
+                <%= f.text_field :enemy_team %> 
+            </div>
+
+            <div class="form-title">
+                <%= f.label :my_score, "Saitama 2nd. 得点数"%>
+            </div>
+            <div class="form-number">
+                <%= f.number_field :my_score %>
+            </div>
+
+            <div class="form-title">
+                <%= f.label :enemy_score, "敵チーム 得点数"%>
+            </div>
+            <div class="form-number">
+                <%= f.number_field :enemy_score %>
+            </div>
+
+            <div class="form-title">
+                <%= f.label :enemy_image, "敵エンブレム"%>
+            </div>
+            <div class="form-image">
+                <%= f.file_field :enemy_image, accept: "image/*" %>
+            </div>
+
+            <%= f.submit '追加' %>
+        <% end %>
+    </div>
+</div>

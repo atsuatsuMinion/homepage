@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-visual">
+            <h1 class="main-title">選手紹介</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 mt-3">
+        <% @members.each do |member| %>
+            <div class="col text-center mt-3">
+                <%= image_tag member.get_profile_image, class: "img-fluid" %><br>
+                <span class="member-furigana"><%= member.furigana %></span><br>
+                <span class="member-name"><%= member.name %></span><br>
+                <span class="member-number">背番号：<strong class="strong-number"><%= member.number %></strong></span><br>
+                <span class="member-position">ポジション：<%= member.position %></span><br>
+                <span class="member-birthday"><%= member.birthday.strftime('%Y年%m月%d日') %></span>
+            </div>
+        <% end %>
+    </div>
+</div>

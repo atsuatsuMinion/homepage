@@ -17,7 +17,7 @@ Devise.setup do |config|
   require 'securerandom'
 
   # 16バイトのランダムな鍵を生成
-  key = SecureRandom.hex(16)
+  key = SecureRandom.random_bytes(16)
 
   # 鍵を設定する
   config.secret_key = key

@@ -14,7 +14,9 @@
   <header>
       <nav class="navbar navbar-expand-md navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand pl-3 pl-lg-5 pt-2" href="/homes/top"><img src="/assets/logo1.png" class="img-fluid"></a>
+          <a class="navbar-brand pl-3 pl-lg-5 pt-2" href="/homes/top">
+            <%= image_tag("logo1.png", class: 'img-fluid') %>
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -64,7 +66,9 @@
         <li class="footer-link">
           <%= link_to "お問い合わせ", homes_inquiry_path, class: 'nav-link text-white' %>
         </li>
-        <a class="footer-logo" href="/homes/top"><img src="/assets/logo2.png" class="img-fluid"></a>
+        <a class="footer-logo" href="/homes/top">
+          <%= image_tag("logo2.png", class: 'img-fluid') %>
+        </a>
       </ul>
     </div>
   </footer>

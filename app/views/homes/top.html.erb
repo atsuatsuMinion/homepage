@@ -9,7 +9,8 @@
     <div class="row row-cols-1 row-cols-sm-2">
         <div class="col-8 col-sm img_wrap ml-auto mr-auto mt-4 mt-sm-5" style="position: relative;">
             <%= link_to homes_team_path do %>
-                <img src="/assets/team_img.jpg" class="img-fluid">
+                <%= image_tag("team_img.jpg", class: 'img-fluid') %>
+                
             <% end %>
         </div>
         <div class="col-8 col-sm img_wrap ml-auto mr-auto mt-4 mt-sm-5" style="position: relative;">

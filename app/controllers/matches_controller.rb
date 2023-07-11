@@ -11,7 +11,7 @@ class MatchesController < ApplicationController
   end
 
   def index
-    @matches = Match.page(params[:page])
+    @matches = Match.order(match_datetime: :desc).page(params[:page])
   end
 
   def edit

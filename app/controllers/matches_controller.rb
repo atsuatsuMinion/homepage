@@ -11,7 +11,7 @@ class MatchesController < ApplicationController
   end
 
   def index
-    @matches = Match.all
+    @matches = Match.page(params[:page])
   end
 
   def edit

@@ -11,6 +11,9 @@
         <div class="row mr-3 mr-md-4 mr-lg-5 ml-3 ml-md-4 ml-lg-5">
             <div class="col-12 schedule-match pt-2 pb-2 mb-4">
                 <div class="schedule-match-top text-center">
+                    <% if user_signed_in? %>
+                        <span> id = <%= match.id %></span>
+                    <% end %>
                     <span class="schedule-match-title">　<%= match.title %></span><br>
                     <% if match.match_datetime.present? %>
                         <span class="schedule-match-datetime">　<%= match.match_datetime.strftime('%Y 年 %m 月 %d 日　%H : %M ～') %></span>

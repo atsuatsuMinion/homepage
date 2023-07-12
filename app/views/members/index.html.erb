@@ -11,6 +11,9 @@
             <div class="col text-center mt-3">
                 <%= image_tag member.get_profile_image, class: "img-fluid" %><br>
                 <span class="member-furigana"><%= member.furigana %></span><br>
+                <% if user_signed_in? %>
+                    <span> id = <%= member.id %></span>
+                <% end %>
                 <span class="member-name"><%= member.name %></span><br>
                 <span class="member-number">背番号：<strong class="strong-number"><%= member.number %></strong></span><br>
                 <span class="member-position">ポジション：<%= member.position %></span><br>
